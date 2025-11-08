@@ -1,0 +1,46 @@
+# Conda Environment Setup Instructions
+#  - Using an environment.yml file with conda
+#  - Key Terminal Commands:
+#
+#    conda env create -f environment.yml
+#    conda env update --file environment.yml --prune
+#    conda env export --name IDS_iot23 > environment.yml
+#    conda env remove --name IDS_iot23
+#    conda env list
+
+name: IDS_iot23
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.15
+  - pip
+  - bottleneck
+  - scikit-learn
+  - scipy
+  - seaborn
+  - pip:
+      - numpy==1.23.5
+      - pandas==1.5.2
+      - ipykernel==6.17.1
+      - ipython==8.7.0
+      - jupyter-client==7.4.7
+      - jupyter-core==5.1.0
+      - matplotlib==3.6.2
+      - tensorflow==2.10.0
+      - torch==1.13.0
+      - torchvision==0.14.0
+      - torchaudio==0.13.0
+      - xgboost
+      - lightgbm
+      - catboost
+      - opencv-python
+      - tqdm
+      - requests
+      - beautifulsoup4
+      - joblib
+      - lxml
+      - pillow
+      - pyarrow
+      - fastparquet
